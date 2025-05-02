@@ -1,0 +1,30 @@
+from math import*
+import os
+import matplotlib.pyplot as plt
+import json
+#ВАРИАНТ 3
+if not os.path.isdir("results"):
+    os.mkdir("results")
+
+def y(x):
+    return 100*sqrt(abs(1-0.01*x**2))+0.01*abs(x+10)
+data = []
+i = -15.0
+while i < 5.0:
+    data.append({"x":round(i,1),"y":round(y(i),3)})
+    i += 0.1
+    
+#Сохранение в JSON
+os.chdir("results")
+with open("res1.json", "w") as f:
+    json.dump({"data" : data},f, indent = 4)
+
+#Построение графика
+X = [point["x"] for point in data]
+Y = [point["y"] for point in data]
+plt.plot(X,Y)
+plt.xlabel("x")
+plt.ylabel("y")
+plt.title("График функции y(x)")
+plt.grid(True)
+plt.show()
