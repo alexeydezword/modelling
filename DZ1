@@ -22,9 +22,9 @@ with open("res1.json", "w") as f:
 #Построение графика
 X = [point["x"] for point in data]
 Y = [point["y"] for point in data]
-plt.plot(X,Y)
-plt.xlabel("x")
-plt.ylabel("y")
+plt.plot(X,Y) #построение графика
+plt.xlabel("x") #подпись оси x
+plt.ylabel("y") #подпись оси y
 plt.title("График функции y(x)")
-plt.grid(True)
+plt.grid(True) #сетка
 plt.show()
