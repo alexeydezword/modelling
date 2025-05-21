@@ -43,11 +43,9 @@ if __name__ == '__main__':
             os.chdir("results")
 
             data = {
-            "data": {
             "freq": self.mass_f,
             "lambda": [3 * 10**8 / f for f in self.mass_f],
             "rcs": self.mass_rcs
-    }
 }
 
             # запись в JSON файл
@@ -74,6 +72,6 @@ if __name__ == '__main__':
     sph.calc()
     o=Output(sph.mass_f,sph.mass_rcs)
     o.output()
-    F.close()
+
 
 
