@@ -27,7 +27,7 @@ if __name__ == '__main__':
                    s+=((-1)**n)*(n+0.5)*(bn-an)
                 self.mass_f.append(f)
                 self.mass_rcs.append((l**2)*((abs(s))**2)/math.pi)
-                f+=1000000
+                f+=100000000
             plt.plot(self.mass_f,self.mass_rcs)
             plt.xlabel("f, Гц")
             plt.ylabel("ЭПР, м^2")
