@@ -4,14 +4,13 @@ import matplotlib.pyplot as plt
 import json
 
 # ВАРИАНТ 3
+# Функция
+def y(x):
+    return 100 * sqrt(abs(1 - 0.01 * x**2)) + 0.01 * abs(x + 10)
 
 # Создание директории results, если её нет
 if not os.path.isdir("results"):
     os.mkdir("results")
-
-# Функция
-def y(x):
-    return 100 * sqrt(abs(1 - 0.01 * x**2)) + 0.01 * abs(x + 10)
 
 # Сбор данных
 X = []
